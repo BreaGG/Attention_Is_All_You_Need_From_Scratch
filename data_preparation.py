@@ -3,7 +3,7 @@ from torch.utils.data import Dataset, DataLoader
 import torch
 
 # Download the tokenizer models
-nltk.download('punkt')
+nltk.download('punkt_tab')
 
 # Tokenizer functions using NLTK
 def tokenize_en(text):

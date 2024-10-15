@@ -1,0 +1,94 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+transformer-env/
+.venv/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# PyCharm project settings
+.idea/
+*.iml
+
+# VSCode project settings
+.vscode/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+pytest_cache/
+cover/
+
+# Pyre type checker
+.pyre/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ignore spaCy language model downloads
+*.spacy
+
+# NLTK corpora and language models
+nltk_data/
+
+# Temporary files and backup files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Data files
+*.csv
+*.json
+
+# Ignore PyTorch model checkpoints and weights
+*.pt
+*.pth
+
+# Ignore large datasets (if any)
+data/
