@@ -1,0 +1,5 @@
+torch
+torchtext
+spacy
+# en-core-web-sm==3.5.0
+# de-core-news-sm==3.5.0
