@@ -31,11 +31,11 @@ The goal of this project is to have a deep understanding of deep learning concep
 ### **1. Attention Mechanism**
 The attention mechanism allows the model to focus on specific parts of the input sequence when generating output, which helps when dealing with long sequences. Each token in the input sequence is assigned a score representing its importance relative to other tokens.
 
-The attention mechanism is computed as:
+The attention mechanism is computed as follows:
 
-\[
+$$
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
-\]
+$$
 
 Where:
 - \( Q \) (Query): The matrix representing the token currently being attended to.
@@ -44,30 +44,30 @@ Where:
 - \( d_k \): The dimensionality of the keys, used to scale the dot product.
 
 ### **2. Scaled Dot-Product Attention**
-The Scaled Dot-Product Attention takes the query and key matrices and computes the dot product. It is then scaled by \( \frac{1}{\sqrt{d_k}} \) to stabilize gradients during backpropagation.
+The Scaled Dot-Product Attention takes the query and key matrices and computes their dot product. It is then scaled by \( \frac{1}{\sqrt{d_k}} \) to stabilize gradients during backpropagation.
 
 ### **3. Multi-Head Attention**
-Multi-Head Attention allows the model to focus on multiple parts of the sequence simultaneously. Instead of performing one attention operation, we split the input into multiple "heads" and apply attention to each. The outputs are concatenated back together:
+Multi-Head Attention allows the model to focus on multiple parts of the sequence simultaneously. Instead of performing a single attention operation, the input is split into multiple "heads," and attention is applied to each. The outputs are concatenated back together:
 
-\[
+$$
 \text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \text{head}_2, \dots, \text{head}_h) W^O
-\]
+$$
 
-Each head is a separate Scaled Dot-Product Attention mechanism.
+Each head is a separate instance of the Scaled Dot-Product Attention mechanism.
 
 ### **4. Positional Encoding**
-Since Transformers don't have any recurrence or convolution, positional encoding is used to give the model information about the order of tokens in a sequence. It is added to the token embeddings.
+Since Transformers do not have any recurrence or convolution, positional encoding is used to provide the model with information about the order of tokens in a sequence. This encoding is added to the token embeddings.
 
-\[
+$$
 PE(pos, 2i) = \sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
-\]
-\[
+$$
+$$
 PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)
-\]
+$$
 
 Where:
-- \( pos \) is the position of the token.
-- \( i \) is the dimension index.
+- \( pos \) is the position of the token in the sequence.
+- \( i \) is the index of the dimension.
 
 ### **5. Encoder and Decoder**
 The Transformer uses an encoder-decoder architecture. Each encoder layer contains:
