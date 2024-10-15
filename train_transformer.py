@@ -1,5 +1,3 @@
-# train_transformer.py
-
 from torch.utils.data import DataLoader
 from data_preparation import prepare_data
 from transformer_model import Transformer
